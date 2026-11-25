@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATIONS</title>
+</head>
+<body>
+    <h1>📘 Patterncoding Tech Academy</h1>
+   <h2>1. Introduction to CSS Animations</h2>
+
+    <p>
+        CSS animations allow us to change the appearance and position
+        of HTML elements over time without using JavaScript.
+    </p>
+
+    <p>
+        We use animations to create movement, loading effects,
+        attention-grabbing elements, transitions between visual states,
+        and interactive website experiences.
+    </p>
+
+    <h3>Animation vs Transition</h3>
+
+    <p>
+            A transition usually changes an element from one state to
+            another when an event occurs, such as hovering over a button.
+        </p>
+
+        <p>
+            An animation can run automatically, repeat several times,
+            move through multiple stages, and be controlled with CSS.
+        </p>
+
+
+        <h3>Example</h3>
+
+        <div class="intro-demo">
+            <div class="intro-box">Watch me move</div>
+        </div>
+
+        <style>
+         .intro-demo {
+            padding: 30px;
+            background: white;
+            overflow: hidden;
+         }
+
+         .intro-box {
+            width: 130px;
+            padding: 15px;
+            color: white;
+            background: #2563eb;
+            border-radius: 8px;
+            animation: introMove 5s infinite alternate;
+         }
+
+         @keyframes introMove {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(100px);
+            }
+         }
+
+        </style>
+
+        <h2>2. CSS Transitions</h2>
+
+         <section class="topic topic-transitions">
+        <h2>2. CSS Transitions</h2>
+
+        <p>
+            CSS transitions allow us to control how smoothly an element
+            changes from one CSS property value to another.
+        </p>
+
+        <h3>Important Transition Properties</h3>
+
+        <ul>
+            <li><strong>transition-property:</strong> The property to animate.</li>
+            <li><strong>transition-duration:</strong> How long the change takes.</li>
+            <li><strong>transition-timing-function:</strong> The speed pattern.</li>
+            <li><strong>transition-delay:</strong> How long to wait before starting.</li>
+            <li><strong>transition:</strong> Shorthand for the transition properties.</li>
+        </ul>
+
+        <h3>Example 1: Transition on Hover</h3>
+
+        <p>Move your mouse over the button.</p>
+
+        <button class="transition-button">Hover Over Me</button>
+
+        <h3>Example 2: Transition Multiple Properties</h3>
+
+        <p>
+            This card changes its background, size, and shadow when hovered.
+        </p>
+
+        <div class="transition-card">
+            <h3>Hover Card</h3>
+            <p>Move your mouse over this card.</p>
+        </div>
+
+        <h3>Example 3: Transition Delay</h3>
+
+        <div class="transition-delay-box">
+            Hover and wait.
+        </div>
+    </section>
+    <style>
+         .topic-transitions {
+            padding: 25px;
+            margin: 25px 0;
+            background: #eff6ff;
+            border-radius: 12px;
+        }
+
+        .transition-button {
+            padding: 14px 25px;
+            border: none;
+            color: white;
+            background: #2563eb;
+            border-radius: 8px;
+            cursor: pointer;
+
+            transition: background-color 0.4s ease,
+                        transform 0.4s ease;
+         }
+         .transition-button:hover {
+            background: #1e40af;
+            transform: scale(1.1);
+         }
+         .transition-card {
+            width: 220px;
+            padding: 20px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #0002;
+            
+            transition:  all 0.4s ease;
+         }
+         .transition-card:hover {
+            background: #dbeafe;
+            transform: translateX(10px);
+            box-shadow: 0 12px 25px #0003;
+        }
+       .transition-delay-box {
+            width: 150px;
+            padding: 20px;
+            margin: 20px 0;
+            color: white;
+            background: #7c3aed;
+            border-radius: 8px;
+
+            transition: transform 0.5s ease 2.5s;
+        }
+
+        .transition-delay-box:hover {
+            transform: translateX(100px);
+        }
+    </style>
+
+ <section class="topic topic-transforms">
+        <h2>3. CSS Transformations</h2>
+
+        <p>
+            The transform property changes an element's position,
+            size, rotation, or shape without changing the normal layout
+            space it occupies.
+        </p>
+
+        <h3>Common Transform Functions</h3>
+
+        <ul>
+            <li><strong>translate():</strong> Moves an element.</li>
+            <li><strong>scale():</strong> Increases or decreases its size.</li>
+            <li><strong>rotate():</strong> Rotates an element.</li>
+            <li><strong>skew():</strong> Slants an element.</li>
+            <li><strong>transform-origin:</strong> Changes the transformation point.</li>
+        </ul>
+
+        <h3>Example 1: Translate</h3>
+        <div class="transform-demo">
+            <div class="transform-box translate-box">Translate</div>
+        </div>
+
+        <h3>Example 2: Scale</h3>
+        <div class="transform-demo">
+            <div class="transform-box scale-box">Scale</div>
+        </div>
+
+        <h3>Example 3: Rotate</h3>
+        <div class="transform-demo">
+            <div class="transform-box rotate-box">Rotate</div>
+        </div>
+
+        <h3>Example 4: Skew</h3>
+        <div class="transform-demo">
+            <div class="transform-box skew-box">Skew</div>
+        </div>
+
+        <h3>Example 5: Combining Transforms</h3>
+        <div class="transform-demo">
+            <div class="transform-box combined-box">Combined</div>
+        </div>
+    </section>
+
+    <style>
+        .topic-transforms {
+            padding: 25px;
+            margin: 25px 0;
+            background: #f5f3ff;
+            border-radius: 12px;
+        }
+
+        
+        .transform-demo {
+            min-height: 110px;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            overflow: hidden;
+        }
+
+          .transform-box {
+            width: 110px;
+            padding: 18px 10px;
+            color: white;
+            text-align: center;
+            background: #7c3aed;
+            border-radius: 8px;
+        }
+
+        .transform-box {
+            transform: translate(50px, 10px);
+        }
+
+        .scale-box {
+            transform: scale(1.3);
+        }
+
+        .rotate-box {
+            transform: rotate(15deg);
+        }
+
+         .skew-box {
+            transform: skew(15deg, 5deg);
+        }
+
+         .combined-box {
+            transform: translateX(30px) rotate(10deg) scale(1.1) skew(15deg, 5deg);
+        }
+
+    </style>
+
+<section class="topic topic-keyframes">
+        <h2>4. CSS Keyframe Animations</h2>
+
+        <p>
+            The @keyframes rule allows us to define the stages of an
+            animation. We can specify what an element should look like
+            at the beginning, middle, and end of an animation.
+        </p>
+
+        <h3>Using from and to</h3>
+
+        <p>
+            The from keyword represents the beginning of an animation,
+            while to represents its ending.
+        </p>
+
+        <div class="keyframe-demo">
+            <div class="keyframe-from-to">From and To</div>
+        </div>
+
+        <h3>Using Percentages</h3>
+
+        <p>
+            Percentages allow us to define multiple stages in one animation.
+            For example, 0%, 50%, and 100%.
+        </p>
+
+        <div class="keyframe-demo">
+            <div class="keyframe-percent">Multiple Stages</div>
+        </div>
+    </section>
+
+    <style>
+        .topic-keyframes {
+            padding: 25px;
+            margin: 25px 0;
+            background: #ecfdf5;
+            border-radius: 12px;
+        }
+
+        .keyframe-demo {
+            min-height: 100px;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            overflow: hidden;
+        }
+
+        .keyframe-from-to {
+            width: 120px;
+            padding: 15px;
+            color: white;
+            background: #059669;
+            border-radius: 8px;
+
+           animation: fromToAnimation 3s infinite alternate;
+        }
+
+        @keyframes fromToAnimation {
+            from {
+                transform: translateX(0);
+                background: #059669;
+            }
+            to {
+                transform: translateX(200px);
+                background: #2563eb;
+            }
+        }
+
+        .keyframe-percent {
+            width: 120px;
+            padding: 15px;
+            color: white;
+            background: #db2777;
+            border-radius: 8px;
+
+            animation: percentageAnimation 4s infinite;
+         }
+
+         @keyframes percentageAnimation {
+            0% {
+                transform: translateX(0);
+                background: #db2777;
+            }
+             50% {
+                transform: translateX(150px) rotate(180deg);
+                background: #7c3aed;
+            }
+            100% {
+                transform: translateX(0);
+                background: #db2777;
+            }
+         }
+    </style>
+
+    <section class="topic topic-properties">
+        <h2>5. CSS Animation Properties</h2>
+
+        <p>
+            CSS provides several properties that control how an animation
+            behaves.
+        </p>
+
+        <ul>
+            <li><strong>animation-name:</strong> Selects the @keyframes animation.</li>
+            <li><strong>animation-duration:</strong> Sets its running time.</li>
+            <li><strong>animation-timing-function:</strong> Controls its speed pattern.</li>
+            <li><strong>animation-delay:</strong> Delays its starting time.</li>
+            <li><strong>animation-iteration-count:</strong> Sets how many times it runs.</li>
+            <li><strong>animation-direction:</strong> Controls its direction.</li>
+            <li><strong>animation-fill-mode:</strong> Controls styles before or after it runs.</li>
+            <li><strong>animation-play-state:</strong> Pauses or runs an animation.</li>
+            <li><strong>animation:</strong> Shorthand for animation properties.</li>
+        </ul>
+
+        <h3>Example 1: Infinite Animation</h3>
+        <div class="property-demo">
+            <div class="infinite-box">Infinite</div>
+        </div>
+
+        <h3>Example 2: Animation Direction</h3>
+        <div class="property-demo">
+            <div class="reverse-box">Alternate</div>
+        </div>
+
+        <h3>Example 3: Animation Delay</h3>
+        <div class="property-demo">
+            <div class="delayed-box">Delayed</div>
+        </div>
+
+        <h3>Example 4: Animation Fill Mode</h3>
+        <div class="property-demo">
+            <div class="fill-box">Forwards</div>
+        </div>
+
+        <h3>Example 5: Pause on Hover</h3>
+        <p>Hover over the moving box to pause it.</p>
+
+        <div class="property-demo">
+            <div class="pause-box">Pause Me</div>
+        </div>
+    </section>
+
+    <style>
+        .topic-properties {
+            padding: 25px;
+            margin: 25px 0;
+            background: #fff7ed;
+            border-radius: 12px;
+        }
+
+        .property-demo {
+            min-height: 100px;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            overflow: hidden;
+        }
+
+        .infinite-box,
+        .reverse-box,
+        .delayed-box,
+        .fill-box,
+        .pause-box {
+            width: 120px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            background: #ea580c;
+            border-radius: 8px;
+        }
+
+        .infinite-box {
+            animation: propertyMove 2s infinite;
+        }
+
+        .reverse-box {
+            animation: propertyMove 2s infinite alternate;
+        }
+
+        .delayed-box {
+            animation: propertyMove 2s 1s infinite alternate;
+        }
+
+        .fill-box {
+            animation: propertyMove 2s forwards;
+        }
+
+        .pause-box {
+            animation: propertyMove 3s infinite alternate;
+        }
+
+        .pause-box:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes propertyMove {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(200px);
+            }
+        }
+    </style>
+
+     <section class="topic topic-timing">
+        <h2>6. Animation Timing Functions</h2>
+
+        <p>
+            Timing functions determine how an animation accelerates
+            and slows down while it runs.
+        </p>
+
+        <ul>
+            <li><strong>linear:</strong> Moves at a constant speed.</li>
+            <li><strong>ease:</strong> Starts slowly, speeds up, then slows down.</li>
+            <li><strong>ease-in:</strong> Starts slowly.</li>
+            <li><strong>ease-out:</strong> Ends slowly.</li>
+            <li><strong>ease-in-out:</strong> Starts and ends slowly.</li>
+            <li><strong>steps():</strong> Moves in defined steps instead of smoothly.</li>
+            <li><strong>cubic-bezier():</strong> Creates a custom speed curve.</li>
+        </ul>
+
+        <h3>Compare Timing Functions</h3>
+
+        <div class="timing-demo">
+            <p>Linear</p>
+            <div class="timing-box timing-linear"></div>
+
+            <p>Ease</p>
+            <div class="timing-box timing-ease"></div>
+
+            <p>Ease In</p>
+            <div class="timing-box timing-in"></div>
+
+            <p>Ease Out</p>
+            <div class="timing-box timing-out"></div>
+
+            <p>Ease In Out</p>
+            <div class="timing-box timing-in-out"></div>
+
+            <p>Steps</p>
+            <div class="timing-box timing-steps"></div>
+        </div>
+    </section>
+
+    <style>
+          .topic-timing {
+            padding: 25px;
+            margin: 25px 0;
+            background: #f0f9ff;
+            border-radius: 12px;
+        }
+
+        .timing-demo {
+            padding: 20px;
+            background: white;
+            overflow: hidden;
+        }
+
+        .timing-box {
+            width: 45px;
+            height: 25px;
+            margin: 10px 0;
+            background: #0284c7;
+            border-radius: 5px;
+            animation: timingMove 3s infinite alternate;
+        }
+        .timing-linear {
+            animation-timing-function: linear;
+        }
+
+        .timing-ease {
+            animation-timing-function: ease;
+        }
+
+         .timing-in {
+            animation-timing-function: ease-in;
+        }
+
+         .timing-out {
+            animation-timing-function: ease-out;
+        }
+        
+             .timing-in-out {
+            animation-timing-function: ease-in-out;
+        }
+
+        .timing-steps {
+            animation-timing-function: steps(5);
+        }
+
+        @keyframes timingMove {
+            to {
+                transform: translateX(250px);
+            }
+        }
+    </style>
+
+    <section class="topic topic-combination">
+        <h2>7. Combining and Staggering Animations</h2>
+
+        <p>
+            We can apply multiple animations to one element by separating
+            their names with commas.
+        </p>
+
+        <p>
+            We can also create staggered animations by giving different
+            elements different animation delays. This makes elements
+            animate one after another.
+        </p>
+
+        <h3>Example 1: Multiple Animations</h3>
+
+        <div class="combination-demo">
+            <div class="multiple-animation">Multiple Effects</div>
+        </div>
+
+        <h3>Example 2: Staggered Animation</h3>
+
+        <div class="stagger-demo">
+            <div class="stagger-item">1</div>
+            <div class="stagger-item">2</div>
+            <div class="stagger-item">3</div>
+            <div class="stagger-item">4</div>
+        </div>
+    </section>
+
+
+    <style>
+         .topic-combination {
+            padding: 25px;
+            margin: 25px 0;
+            background: #fdf2f8;
+            border-radius: 12px;
+        }
+
+        .combination-demo,
+        .stagger-demo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            min-height: 120px;
+            padding: 20px;
+            background: white;
+            overflow: hidden;
+        }
+
+        .multiple-animation {
+            padding: 20px;
+            color: white;
+            background: #db2777;
+            border-radius: 8px;
+
+            animation: combinationMove 3s infinite alternate,
+                       combinationColor 3s infinite alternate;
+        }
+
+
+        
+        @keyframes combinationMove {
+            to {
+                transform: translateX(100px) rotate(270deg);
+            }
+        }
+
+         @keyframes combinationColor {
+            to {
+                background: #7c3aed;
+            }
+        }
+
+         .stagger-item {
+            display: grid;
+            place-items: center;
+            width: 45px;
+            height: 45px;
+            color: white;
+            background: #db2777;
+            border-radius: 8px;
+
+            animation: staggerMove 1s ease-in-out infinite alternate;
+        }
+
+         .stagger-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .stagger-item:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .stagger-item:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes staggerMove {
+            to {
+                transform: translateY(-30px);
+            }
+        }
+
+    </style>
+
+    <section class="topic topic-effects">
+        <h2>8. Practical CSS Animation Effects</h2>
+
+        <p>
+            Professional websites use animations to improve feedback,
+            guide attention, and make interfaces feel more responsive.
+        </p>
+
+        <h3>Example 1: Loading Spinner</h3>
+
+        <div class="effects-demo">
+            <div class="spinner"></div>
+        </div>
+
+        <h3>Example 2: Bouncing Ball</h3>
+
+        <div class="effects-demo">
+            <div class="ball"></div>
+        </div>
+
+        <h3>Example 3: Pulsing Notification</h3>
+
+        <div class="effects-demo">
+            <div class="notification">3</div>
+        </div>
+
+        <h3>Example 4: Animated Text</h3>
+
+        <div class="effects-demo">
+            <h2 class="animated-text">Welcome to PatternCoding</h2>
+        </div>
+
+        <h3>Example 5: Image Zoom on Hover</h3>
+
+        <div class="image-animation">
+            <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700"
+                alt="A computer workspace"
+            >
+        </div>
+
+        <h3>Example 6: Animated Gradient</h3>
+
+        <div class="gradient-animation">
+            Animated Gradient
+        </div>
+
+        <h3>Example 7: Skeleton Loading</h3>
+
+        <div class="skeleton-card">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line short"></div>
+        </div>
+    </section>
+
+
+    <style>
+          .topic-effects {
+            padding: 25px;
+            margin: 25px 0;
+            background: #f0fdfa;
+            border-radius: 12px;
+        }
+
+        .effects-demo {
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+        }
+
+        .spinner {
+            width: 45px;
+            height: 45px;
+            border: 5px solid #cbd5e1;
+            border-top-color: #0d9488;
+            border-radius: 50%;
+
+            animation: spin 1s linear infinite;
+        }
+
+         @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+         .ball {
+            width: 35px;
+            height: 35px;
+            background: #0d9488;
+            border-radius: 50%;
+
+            animation: bounce 0.7s ease-in-out infinite alternate;
+        }
+
+         @keyframes bounce {
+            to {
+                transform: translateY(-35px);
+            }
+        }
+
+         .notification {
+            display: grid;
+            place-items: center;
+            width: 45px;
+            height: 45px;
+            color: white;
+            background: #ef4444;
+            border-radius: 50%;
+
+            animation: pulse 1s infinite;
+        }
+        
+         @keyframes pulse {
+            50% {
+                transform: scale(1.25);
+                box-shadow: 0 0 0 12px #ef444433;
+            }
+        }
+
+         .animated-text {
+            color: #0d9488;
+            animation: textReveal 2s ease-in-out infinite alternate;
+        }
+
+         @keyframes textReveal {
+            from {
+                opacity: 0.1;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+         .image-animation {
+            width: 300px;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .image-animation img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+    .image-animation:hover img {
+            transform: scale(1.15);
+        }
+    
+        .gradient-animation {
+            padding: 35px;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+
+            background: linear-gradient(
+                90deg,
+                #0d9488,
+                #2563eb,
+                #9333ea,
+                #0d9488
+            );
+
+            background-size: 300% 300%;
+            animation: gradientMove 5s ease infinite;
+        }
+    
+          @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+         .skeleton-card {
+            width: 250px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .skeleton-image,
+        .skeleton-line {
+            background: linear-gradient(
+                90deg,
+                #e2e8f0 25%,
+                #f8fafc 50%,
+                #e2e8f0 75%
+            );
+
+            background-size: 200% 100%;
+            animation: skeletonLoading 1.5s infinite;
+            border-radius: 6px;
+        }
+
+        .skeleton-image {
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .skeleton-line {
+            height: 12px;
+            margin-bottom: 10px;
+        }
+
+        .skeleton-line.short {
+            width: 60%;
+        }
+
+        @keyframes skeletonLoading {
+            to {
+                background-position: -200% 0;
+            }
+        }
+    </style>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATIONS</title>
+</head>
+<body>
+    <h1>📘 Patterncoding Tech Academy</h1>
+   <h2>1. Introduction to CSS Animations</h2>
+
+    <p>
+        CSS animations allow us to change the appearance and position
+        of HTML elements over time without using JavaScript.
+    </p>
+
+    <p>
+        We use animations to create movement, loading effects,
+        attention-grabbing elements, transitions between visual states,
+        and interactive website experiences.
+    </p>
+
+    <h3>Animation vs Transition</h3>
+
+    <p>
+            A transition usually changes an element from one state to
+            another when an event occurs, such as hovering over a button.
+        </p>
+
+        <p>
+            An animation can run automatically, repeat several times,
+            move through multiple stages, and be controlled with CSS.
+        </p>
+
+
+        <h3>Example</h3>
+
+        <div class="intro-demo">
+            <div class="intro-box">Watch me move</div>
+        </div>
+
+        <style>
+         .intro-demo {
+            padding: 30px;
+            background: white;
+            overflow: hidden;
+         }
+
+         .intro-box {
+            width: 130px;
+            padding: 15px;
+            color: white;
+            background: #2563eb;
+            border-radius: 8px;
+            animation: introMove 5s infinite alternate;
+         }
+
+         @keyframes introMove {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(100px);
+            }
+         }
+
+        </style>
+
+        <h2>2. CSS Transitions</h2>
+
+         <section class="topic topic-transitions">
+        <h2>2. CSS Transitions</h2>
+
+        <p>
+            CSS transitions allow us to control how smoothly an element
+            changes from one CSS property value to another.
+        </p>
+
+        <h3>Important Transition Properties</h3>
+
+        <ul>
+            <li><strong>transition-property:</strong> The property to animate.</li>
+            <li><strong>transition-duration:</strong> How long the change takes.</li>
+            <li><strong>transition-timing-function:</strong> The speed pattern.</li>
+            <li><strong>transition-delay:</strong> How long to wait before starting.</li>
+            <li><strong>transition:</strong> Shorthand for the transition properties.</li>
+        </ul>
+
+        <h3>Example 1: Transition on Hover</h3>
+
+        <p>Move your mouse over the button.</p>
+
+        <button class="transition-button">Hover Over Me</button>
+
+        <h3>Example 2: Transition Multiple Properties</h3>
+
+        <p>
+            This card changes its background, size, and shadow when hovered.
+        </p>
+
+        <div class="transition-card">
+            <h3>Hover Card</h3>
+            <p>Move your mouse over this card.</p>
+        </div>
+
+        <h3>Example 3: Transition Delay</h3>
+
+        <div class="transition-delay-box">
+            Hover and wait.
+        </div>
+    </section>
+    <style>
+         .topic-transitions {
+            padding: 25px;
+            margin: 25px 0;
+            background: #eff6ff;
+            border-radius: 12px;
+        }
+
+        .transition-button {
+            padding: 14px 25px;
+            border: none;
+            color: white;
+            background: #2563eb;
+            border-radius: 8px;
+            cursor: pointer;
+
+            transition: background-color 0.4s ease,
+                        transform 0.4s ease;
+         }
+         .transition-button:hover {
+            background: #1e40af;
+            transform: scale(1.1);
+         }
+         .transition-card {
+            width: 220px;
+            padding: 20px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #0002;
+            
+            transition:  all 0.4s ease;
+         }
+         .transition-card:hover {
+            background: #dbeafe;
+            transform: translateX(10px);
+            box-shadow: 0 12px 25px #0003;
+        }
+       .transition-delay-box {
+            width: 150px;
+            padding: 20px;
+            margin: 20px 0;
+            color: white;
+            background: #7c3aed;
+            border-radius: 8px;
+
+            transition: transform 0.5s ease 2.5s;
+        }
+
+        .transition-delay-box:hover {
+            transform: translateX(100px);
+        }
+    </style>
+
+ <section class="topic topic-transforms">
+        <h2>3. CSS Transformations</h2>
+
+        <p>
+            The transform property changes an element's position,
+            size, rotation, or shape without changing the normal layout
+            space it occupies.
+        </p>
+
+        <h3>Common Transform Functions</h3>
+
+        <ul>
+            <li><strong>translate():</strong> Moves an element.</li>
+            <li><strong>scale():</strong> Increases or decreases its size.</li>
+            <li><strong>rotate():</strong> Rotates an element.</li>
+            <li><strong>skew():</strong> Slants an element.</li>
+            <li><strong>transform-origin:</strong> Changes the transformation point.</li>
+        </ul>
+
+        <h3>Example 1: Translate</h3>
+        <div class="transform-demo">
+            <div class="transform-box translate-box">Translate</div>
+        </div>
+
+        <h3>Example 2: Scale</h3>
+        <div class="transform-demo">
+            <div class="transform-box scale-box">Scale</div>
+        </div>
+
+        <h3>Example 3: Rotate</h3>
+        <div class="transform-demo">
+            <div class="transform-box rotate-box">Rotate</div>
+        </div>
+
+        <h3>Example 4: Skew</h3>
+        <div class="transform-demo">
+            <div class="transform-box skew-box">Skew</div>
+        </div>
+
+        <h3>Example 5: Combining Transforms</h3>
+        <div class="transform-demo">
+            <div class="transform-box combined-box">Combined</div>
+        </div>
+    </section>
+
+    <style>
+        .topic-transforms {
+            padding: 25px;
+            margin: 25px 0;
+            background: #f5f3ff;
+            border-radius: 12px;
+        }
+
+        
+        .transform-demo {
+            min-height: 110px;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            overflow: hidden;
+        }
+
+          .transform-box {
+            width: 110px;
+            padding: 18px 10px;
+            color: white;
+            text-align: center;
+            background: #7c3aed;
+            border-radius: 8px;
+        }
+
+        .transform-box {
+            transform: translate(50px, 10px);
+        }
+
+        .scale-box {
+            transform: scale(1.3);
+        }
+
+        .rotate-box {
+            transform: rotate(15deg);
+        }
+
+         .skew-box {
+            transform: skew(15deg, 5deg);
+        }
+
+         .combined-box {
+            transform: translateX(30px) rotate(10deg) scale(1.1) skew(15deg, 5deg);
+        }
+
+    </style>
+
+<section class="topic topic-keyframes">
+        <h2>4. CSS Keyframe Animations</h2>
+
+        <p>
+            The @keyframes rule allows us to define the stages of an
+            animation. We can specify what an element should look like
+            at the beginning, middle, and end of an animation.
+        </p>
+
+        <h3>Using from and to</h3>
+
+        <p>
+            The from keyword represents the beginning of an animation,
+            while to represents its ending.
+        </p>
+
+        <div class="keyframe-demo">
+            <div class="keyframe-from-to">From and To</div>
+        </div>
+
+        <h3>Using Percentages</h3>
+
+        <p>
+            Percentages allow us to define multiple stages in one animation.
+            For example, 0%, 50%, and 100%.
+        </p>
+
+        <div class="keyframe-demo">
+            <div class="keyframe-percent">Multiple Stages</div>
+        </div>
+    </section>
+
+    <style>
+        .topic-keyframes {
+            padding: 25px;
+            margin: 25px 0;
+            background: #ecfdf5;
+            border-radius: 12px;
+        }
+
+        .keyframe-demo {
+            min-height: 100px;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            overflow: hidden;
+        }
+
+        .keyframe-from-to {
+            width: 120px;
+            padding: 15px;
+            color: white;
+            background: #059669;
+            border-radius: 8px;
+
+           animation: fromToAnimation 3s infinite alternate;
+        }
+
+        @keyframes fromToAnimation {
+            from {
+                transform: translateX(0);
+                background: #059669;
+            }
+            to {
+                transform: translateX(200px);
+                background: #2563eb;
+            }
+        }
+
+        .keyframe-percent {
+            width: 120px;
+            padding: 15px;
+            color: white;
+            background: #db2777;
+            border-radius: 8px;
+
+            animation: percentageAnimation 4s infinite;
+         }
+
+         @keyframes percentageAnimation {
+            0% {
+                transform: translateX(0);
+                background: #db2777;
+            }
+             50% {
+                transform: translateX(150px) rotate(180deg);
+                background: #7c3aed;
+            }
+            100% {
+                transform: translateX(0);
+                background: #db2777;
+            }
+         }
+    </style>
+
+    <section class="topic topic-properties">
+        <h2>5. CSS Animation Properties</h2>
+
+        <p>
+            CSS provides several properties that control how an animation
+            behaves.
+        </p>
+
+        <ul>
+            <li><strong>animation-name:</strong> Selects the @keyframes animation.</li>
+            <li><strong>animation-duration:</strong> Sets its running time.</li>
+            <li><strong>animation-timing-function:</strong> Controls its speed pattern.</li>
+            <li><strong>animation-delay:</strong> Delays its starting time.</li>
+            <li><strong>animation-iteration-count:</strong> Sets how many times it runs.</li>
+            <li><strong>animation-direction:</strong> Controls its direction.</li>
+            <li><strong>animation-fill-mode:</strong> Controls styles before or after it runs.</li>
+            <li><strong>animation-play-state:</strong> Pauses or runs an animation.</li>
+            <li><strong>animation:</strong> Shorthand for animation properties.</li>
+        </ul>
+
+        <h3>Example 1: Infinite Animation</h3>
+        <div class="property-demo">
+            <div class="infinite-box">Infinite</div>
+        </div>
+
+        <h3>Example 2: Animation Direction</h3>
+        <div class="property-demo">
+            <div class="reverse-box">Alternate</div>
+        </div>
+
+        <h3>Example 3: Animation Delay</h3>
+        <div class="property-demo">
+            <div class="delayed-box">Delayed</div>
+        </div>
+
+        <h3>Example 4: Animation Fill Mode</h3>
+        <div class="property-demo">
+            <div class="fill-box">Forwards</div>
+        </div>
+
+        <h3>Example 5: Pause on Hover</h3>
+        <p>Hover over the moving box to pause it.</p>
+
+        <div class="property-demo">
+            <div class="pause-box">Pause Me</div>
+        </div>
+    </section>
+
+    <style>
+        .topic-properties {
+            padding: 25px;
+            margin: 25px 0;
+            background: #fff7ed;
+            border-radius: 12px;
+        }
+
+        .property-demo {
+            min-height: 100px;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            overflow: hidden;
+        }
+
+        .infinite-box,
+        .reverse-box,
+        .delayed-box,
+        .fill-box,
+        .pause-box {
+            width: 120px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            background: #ea580c;
+            border-radius: 8px;
+        }
+
+        .infinite-box {
+            animation: propertyMove 2s infinite;
+        }
+
+        .reverse-box {
+            animation: propertyMove 2s infinite alternate;
+        }
+
+        .delayed-box {
+            animation: propertyMove 2s 1s infinite alternate;
+        }
+
+        .fill-box {
+            animation: propertyMove 2s forwards;
+        }
+
+        .pause-box {
+            animation: propertyMove 3s infinite alternate;
+        }
+
+        .pause-box:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes propertyMove {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(200px);
+            }
+        }
+    </style>
+
+     <section class="topic topic-timing">
+        <h2>6. Animation Timing Functions</h2>
+
+        <p>
+            Timing functions determine how an animation accelerates
+            and slows down while it runs.
+        </p>
+
+        <ul>
+            <li><strong>linear:</strong> Moves at a constant speed.</li>
+            <li><strong>ease:</strong> Starts slowly, speeds up, then slows down.</li>
+            <li><strong>ease-in:</strong> Starts slowly.</li>
+            <li><strong>ease-out:</strong> Ends slowly.</li>
+            <li><strong>ease-in-out:</strong> Starts and ends slowly.</li>
+            <li><strong>steps():</strong> Moves in defined steps instead of smoothly.</li>
+            <li><strong>cubic-bezier():</strong> Creates a custom speed curve.</li>
+        </ul>
+
+        <h3>Compare Timing Functions</h3>
+
+        <div class="timing-demo">
+            <p>Linear</p>
+            <div class="timing-box timing-linear"></div>
+
+            <p>Ease</p>
+            <div class="timing-box timing-ease"></div>
+
+            <p>Ease In</p>
+            <div class="timing-box timing-in"></div>
+
+            <p>Ease Out</p>
+            <div class="timing-box timing-out"></div>
+
+            <p>Ease In Out</p>
+            <div class="timing-box timing-in-out"></div>
+
+            <p>Steps</p>
+            <div class="timing-box timing-steps"></div>
+        </div>
+    </section>
+
+    <style>
+          .topic-timing {
+            padding: 25px;
+            margin: 25px 0;
+            background: #f0f9ff;
+            border-radius: 12px;
+        }
+
+        .timing-demo {
+            padding: 20px;
+            background: white;
+            overflow: hidden;
+        }
+
+        .timing-box {
+            width: 45px;
+            height: 25px;
+            margin: 10px 0;
+            background: #0284c7;
+            border-radius: 5px;
+            animation: timingMove 3s infinite alternate;
+        }
+        .timing-linear {
+            animation-timing-function: linear;
+        }
+
+        .timing-ease {
+            animation-timing-function: ease;
+        }
+
+         .timing-in {
+            animation-timing-function: ease-in;
+        }
+
+         .timing-out {
+            animation-timing-function: ease-out;
+        }
+        
+             .timing-in-out {
+            animation-timing-function: ease-in-out;
+        }
+
+        .timing-steps {
+            animation-timing-function: steps(5);
+        }
+
+        @keyframes timingMove {
+            to {
+                transform: translateX(250px);
+            }
+        }
+    </style>
+
+    <section class="topic topic-combination">
+        <h2>7. Combining and Staggering Animations</h2>
+
+        <p>
+            We can apply multiple animations to one element by separating
+            their names with commas.
+        </p>
+
+        <p>
+            We can also create staggered animations by giving different
+            elements different animation delays. This makes elements
+            animate one after another.
+        </p>
+
+        <h3>Example 1: Multiple Animations</h3>
+
+        <div class="combination-demo">
+            <div class="multiple-animation">Multiple Effects</div>
+        </div>
+
+        <h3>Example 2: Staggered Animation</h3>
+
+        <div class="stagger-demo">
+            <div class="stagger-item">1</div>
+            <div class="stagger-item">2</div>
+            <div class="stagger-item">3</div>
+            <div class="stagger-item">4</div>
+        </div>
+    </section>
+
+
+    <style>
+         .topic-combination {
+            padding: 25px;
+            margin: 25px 0;
+            background: #fdf2f8;
+            border-radius: 12px;
+        }
+
+        .combination-demo,
+        .stagger-demo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            min-height: 120px;
+            padding: 20px;
+            background: white;
+            overflow: hidden;
+        }
+
+        .multiple-animation {
+            padding: 20px;
+            color: white;
+            background: #db2777;
+            border-radius: 8px;
+
+            animation: combinationMove 3s infinite alternate,
+                       combinationColor 3s infinite alternate;
+        }
+
+
+        
+        @keyframes combinationMove {
+            to {
+                transform: translateX(100px) rotate(270deg);
+            }
+        }
+
+         @keyframes combinationColor {
+            to {
+                background: #7c3aed;
+            }
+        }
+
+         .stagger-item {
+            display: grid;
+            place-items: center;
+            width: 45px;
+            height: 45px;
+            color: white;
+            background: #db2777;
+            border-radius: 8px;
+
+            animation: staggerMove 1s ease-in-out infinite alternate;
+        }
+
+         .stagger-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .stagger-item:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .stagger-item:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes staggerMove {
+            to {
+                transform: translateY(-30px);
+            }
+        }
+
+    </style>
+
+    <section class="topic topic-effects">
+        <h2>8. Practical CSS Animation Effects</h2>
+
+        <p>
+            Professional websites use animations to improve feedback,
+            guide attention, and make interfaces feel more responsive.
+        </p>
+
+        <h3>Example 1: Loading Spinner</h3>
+
+        <div class="effects-demo">
+            <div class="spinner"></div>
+        </div>
+
+        <h3>Example 2: Bouncing Ball</h3>
+
+        <div class="effects-demo">
+            <div class="ball"></div>
+        </div>
+
+        <h3>Example 3: Pulsing Notification</h3>
+
+        <div class="effects-demo">
+            <div class="notification">3</div>
+        </div>
+
+        <h3>Example 4: Animated Text</h3>
+
+        <div class="effects-demo">
+            <h2 class="animated-text">Welcome to PatternCoding</h2>
+        </div>
+
+        <h3>Example 5: Image Zoom on Hover</h3>
+
+        <div class="image-animation">
+            <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700"
+                alt="A computer workspace"
+            >
+        </div>
+
+        <h3>Example 6: Animated Gradient</h3>
+
+        <div class="gradient-animation">
+            Animated Gradient
+        </div>
+
+        <h3>Example 7: Skeleton Loading</h3>
+
+        <div class="skeleton-card">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line short"></div>
+        </div>
+    </section>
+
+
+    <style>
+          .topic-effects {
+            padding: 25px;
+            margin: 25px 0;
+            background: #f0fdfa;
+            border-radius: 12px;
+        }
+
+        .effects-demo {
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+        }
+
+        .spinner {
+            width: 45px;
+            height: 45px;
+            border: 5px solid #cbd5e1;
+            border-top-color: #0d9488;
+            border-radius: 50%;
+
+            animation: spin 1s linear infinite;
+        }
+
+         @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+         .ball {
+            width: 35px;
+            height: 35px;
+            background: #0d9488;
+            border-radius: 50%;
+
+            animation: bounce 0.7s ease-in-out infinite alternate;
+        }
+
+         @keyframes bounce {
+            to {
+                transform: translateY(-35px);
+            }
+        }
+
+         .notification {
+            display: grid;
+            place-items: center;
+            width: 45px;
+            height: 45px;
+            color: white;
+            background: #ef4444;
+            border-radius: 50%;
+
+            animation: pulse 1s infinite;
+        }
+        
+         @keyframes pulse {
+            50% {
+                transform: scale(1.25);
+                box-shadow: 0 0 0 12px #ef444433;
+            }
+        }
+
+         .animated-text {
+            color: #0d9488;
+            animation: textReveal 2s ease-in-out infinite alternate;
+        }
+
+         @keyframes textReveal {
+            from {
+                opacity: 0.1;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+         .image-animation {
+            width: 300px;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .image-animation img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+    .image-animation:hover img {
+            transform: scale(1.15);
+        }
+    
+        .gradient-animation {
+            padding: 35px;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+
+            background: linear-gradient(
+                90deg,
+                #0d9488,
+                #2563eb,
+                #9333ea,
+                #0d9488
+            );
+
+            background-size: 300% 300%;
+            animation: gradientMove 5s ease infinite;
+        }
+    
+          @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+         .skeleton-card {
+            width: 250px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .skeleton-image,
+        .skeleton-line {
+            background: linear-gradient(
+                90deg,
+                #e2e8f0 25%,
+                #f8fafc 50%,
+                #e2e8f0 75%
+            );
+
+            background-size: 200% 100%;
+            animation: skeletonLoading 1.5s infinite;
+            border-radius: 6px;
+        }
+
+        .skeleton-image {
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .skeleton-line {
+            height: 12px;
+            margin-bottom: 10px;
+        }
+
+        .skeleton-line.short {
+            width: 60%;
+        }
+
+        @keyframes skeletonLoading {
+            to {
+                background-position: -200% 0;
+            }
+        }
+    </style>
+</body>
+</html>
+</body>
+</html>
